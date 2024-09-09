@@ -40,13 +40,31 @@ namespace StringCalculator
 
         private static (int, string) GetDelimiter(string inputs, int selectedOperation)
         {
+            string delimiter = "";
+            bool state = true;
+            int a = 3, j = 4;
             string subInputs;
 
             var inputsAsCharArray = inputs.ToCharArray();
 
-            string delimiter = inputsAsCharArray[2].ToString();
+            while (state)
+            {
+                delimiter += inputsAsCharArray[a];
 
-            subInputs = inputs.Substring(5);
+                if (inputsAsCharArray[j] == '\\')
+                {
+                    state = false;
+                }
+                else
+                {
+                    a++;
+                    j++;
+                }
+            }
+
+            delimiter = delimiter.Remove(delimiter.Length - 1);
+
+            subInputs = inputs.Substring(inputs.IndexOf('n') + 1);
 
             return performOperationWithDelimiter(subInputs, delimiter, selectedOperation);
         }
