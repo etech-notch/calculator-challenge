@@ -40,3 +40,4 @@ C:/Users/USER/Desktop/Current/calculator-challenge/calculator-challenge/StringCa
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.pdb
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.genruntimeconfig.cache
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/ref/StringCalculator.dll
+/Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.sourcelink.json

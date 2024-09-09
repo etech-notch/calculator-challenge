@@ -2,7 +2,7 @@ using Xunit;
 
 namespace StringCalculatorUnitTest
 {
-    public class UnitTests
+    public class SupportMaximumOfTwoNumbersUnitTests
     {
         [Fact]
         public void Support_a_maximum_of_two_numbers_using_comma_delimiter1()

@@ -1,4 +1,6 @@
-﻿namespace StringCalculator
+﻿using System.Linq;
+
+namespace StringCalculator
 {
     public class StringCalculator
     {
@@ -25,7 +27,19 @@
         {
             string[] inputsAsArray = inputs.Split(delimiter);
 
-            if (delimiter.Equals(",") && inputsAsArray.Length > 2)
+            bool inputsAreNumbers = inputsAsArray.All(u =>
+            {
+                if (int.TryParse(u, out int numb))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            });
+
+            if (!inputsAreNumbers && delimiter.Equals(",") && inputsAsArray.Length > 2)
             {
                 throw new Exception($"Inputs with more than 2 numbers are not allowed when using comma as delimiter: {inputs}");
             }
@@ -63,7 +77,7 @@
                 }
             }
 
-            operationExpression = operationExpression.Remove(operationExpression.Length-1);
+            operationExpression = operationExpression.Remove(operationExpression.Length - 1);
             return (sumResults, operationExpression);
         }
 

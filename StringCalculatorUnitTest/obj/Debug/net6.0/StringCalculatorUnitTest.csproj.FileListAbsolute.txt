@@ -212,3 +212,4 @@ C:/Users/USER/Desktop/Current/calculator-challenge/calculator-challenge/StringCa
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.pdb
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.genruntimeconfig.cache
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/ref/StringCalculatorUnitTest.dll
+/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.sourcelink.json
