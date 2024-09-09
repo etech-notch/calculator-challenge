@@ -55,7 +55,7 @@ namespace StringCalculator
             }
 
             int sumResults = 0, inputAsInt;
-            string operationExpression = "";
+            string operationExpression = "", negativeConstraint = "";
 
             foreach (var input in inputsAsArray)
             {
@@ -66,25 +66,38 @@ namespace StringCalculator
                     inputAsInt = 0;
                 }
 
-                switch (selectedOperation)
+
+                if (inputAsInt < 0)
                 {
-                    case 1:
-                        operationExpression = operationExpression + inputAsInt + "+";
-                        sumResults += inputAsInt;
-                        break;
-                    case 2:
-                        operationExpression = operationExpression + inputAsInt + "-";
-                        sumResults -= inputAsInt;
-                        break;
-                    case 3:
-                        operationExpression = operationExpression + inputAsInt + "*";
-                        sumResults *= inputAsInt;
-                        break;
-                    case 4:
-                        operationExpression = operationExpression + inputAsInt + "/";
-                        sumResults /= inputAsInt;
-                        break;
+                    negativeConstraint = negativeConstraint + trimedInput + " ";
                 }
+                else
+                {
+                    switch (selectedOperation)
+                    {
+                        case 1:
+                            operationExpression = operationExpression + inputAsInt + "+";
+                            sumResults += inputAsInt;
+                            break;
+                        case 2:
+                            operationExpression = operationExpression + inputAsInt + "-";
+                            sumResults -= inputAsInt;
+                            break;
+                        case 3:
+                            operationExpression = operationExpression + inputAsInt + "*";
+                            sumResults *= inputAsInt;
+                            break;
+                        case 4:
+                            operationExpression = operationExpression + inputAsInt + "/";
+                            sumResults /= inputAsInt;
+                            break;
+                    }
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(negativeConstraint))
+            {
+                throw new Exception($"Negative numbers are not allowed:  {negativeConstraint}");
             }
 
             operationExpression = operationExpression.Remove(operationExpression.Length - 1);
