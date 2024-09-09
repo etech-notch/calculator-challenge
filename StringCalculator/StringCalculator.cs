@@ -6,25 +6,36 @@ namespace StringCalculator
     {
         public static (int, string) PerformOperation(string inputs, int selectedOperation)
         {
-            int operationResult = 0;
-            string operationExpression;
-
-            if (string.IsNullOrWhiteSpace(inputs))
+            try
             {
-                (operationResult, operationExpression) = (0, "0");
-            }
-            else if (CheckDelimiter(inputs))
-            {
-                (operationResult, operationExpression) = GetDelimiter(inputs, selectedOperation);
-            }
-            else
-            {
-                (operationResult, operationExpression) = performOperationWithDelimiter(inputs, ",", selectedOperation);
-            }
+                int operationResult = 0;
+                string operationExpression;
 
-            PrintResult(inputs, operationExpression, operationResult);
+                if (string.IsNullOrWhiteSpace(inputs))
+                {
+                    (operationResult, operationExpression) = (0, "0");
+                }
+                else if (CheckDelimiter(inputs))
+                {
+                    (operationResult, operationExpression) = GetDelimiter(inputs, selectedOperation);
+                }
+                else
+                {
+                    var delimiters = new Queue<string>();
+                    delimiters.Enqueue(",");
 
-            return (operationResult, operationExpression);
+                    if (inputs.Contains("\\n"))
+                    {
+                        delimiters.Enqueue("\\n");
+                    }
+
+                    (operationResult, operationExpression) = performOperationWithDelimiter(inputs, delimiters, selectedOperation);
+                }
+
+                PrintResult(inputs, operationExpression, operationResult);
+
+                return (operationResult, operationExpression);
+            }catch { throw; }
         }
 
         private static bool CheckDelimiter(string inputs)
@@ -40,9 +51,10 @@ namespace StringCalculator
 
         private static (int, string) GetDelimiter(string inputs, int selectedOperation)
         {
+            Queue<string> delimiters = new();
             string delimiter = "";
             bool state = true;
-            int a = 3, j = 4;
+            int a = 2, j = 3;
             string subInputs;
 
             var inputsAsCharArray = inputs.ToCharArray();
@@ -51,9 +63,25 @@ namespace StringCalculator
             {
                 delimiter += inputsAsCharArray[a];
 
-                if (inputsAsCharArray[j] == '\\')
+                if (inputsAsCharArray[j] == '\\' || inputsAsCharArray[j] == ']')
                 {
-                    state = false;
+                    if (delimiter[0] == '[')
+                    {
+                        delimiter = delimiter.Remove(0, 1);
+                    }
+
+                    delimiters.Enqueue(delimiter);
+                    delimiter = "";
+
+                    if (inputsAsCharArray[j + 1] != '[')
+                    {
+                        state = false;
+                    }
+                    else
+                    {
+                        a += 3;
+                        j += 3;
+                    }
                 }
                 else
                 {
@@ -62,26 +90,33 @@ namespace StringCalculator
                 }
             }
 
-            delimiter = delimiter.Remove(delimiter.Length - 1);
-
             subInputs = inputs.Substring(inputs.IndexOf('n') + 1);
 
-            return performOperationWithDelimiter(subInputs, delimiter, selectedOperation);
+            return performOperationWithDelimiter(subInputs, delimiters, selectedOperation);
         }
 
-        private static (int, string) performOperationWithDelimiter(string inputs, string delimiter, int selectedOperation)
+        private static (int, string) performOperationWithDelimiter(string inputs, Queue<string> delimiters, int selectedOperation)
         {
-            string[] inputsAsArray = inputs.Split(delimiter);
+            var inputsAsArray = new List<string>() { inputs };
             var subInpoutArray = new List<string>();
+            var usedDelimiters = new List<string>();
 
-            foreach (var strg in inputsAsArray)
+            do
             {
-                string[] strgAsArray = strg.Split("\\n");
+                var delimiter = delimiters.Dequeue();
+                usedDelimiters.Add(delimiter);
 
-                subInpoutArray.AddRange(strgAsArray.ToList());
-            }
+                foreach (var strg in inputsAsArray)
+                {
+                    string[] strgAsArray = strg.Split(delimiter);
 
-            inputsAsArray = subInpoutArray.ToArray();
+                    subInpoutArray.AddRange(strgAsArray.ToList());
+                }
+
+                inputsAsArray = subInpoutArray;
+                subInpoutArray = new List<string>();
+
+            } while (delimiters.Count > 0);
 
             bool inputsAreNumbers = inputsAsArray.All(u =>
             {
@@ -95,7 +130,7 @@ namespace StringCalculator
                 }
             });
 
-            if (!inputsAreNumbers && delimiter.Equals(",") && inputsAsArray.Length > 2)
+            if (!inputsAreNumbers && usedDelimiters.All(u => u == ",") && inputsAsArray.Count > 2)
             {
                 throw new Exception($"Inputs with more than 2 numbers are not allowed when using comma as delimiter: {inputs}");
             }
@@ -111,7 +146,6 @@ namespace StringCalculator
                 {
                     inputAsInt = 0;
                 }
-
 
                 if (inputAsInt < 0)
                 {

@@ -55,9 +55,7 @@ namespace StringCalculatorUnitTest
         [Fact]
         public void Support_a_maximum_of_two_numbers_using_comma_delimiter7()
         {
-            var (operationResult, operationExpression) = StringCalculator.StringCalculator.PerformOperation("5, tytyt", 1);
-
-            Assert.Equal(5, operationResult);
+            Assert.Throws<Exception>(()=> StringCalculator.StringCalculator.PerformOperation("5, tytyt, 6", 1));
         }
 
         [Fact]

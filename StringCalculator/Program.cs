@@ -5,8 +5,6 @@ namespace StringCalculator
     {
         public static void Main()
         {
-            Console.CancelKeyPress += (sender, e) => Console.WriteLine("App operation terminated!");
-
             string UserSelection = string.Empty;
 
             PrintMenu();

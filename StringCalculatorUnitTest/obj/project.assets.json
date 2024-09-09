@@ -5533,37 +5533,40 @@
     ]
   },
   "packageFolders": {
-    "/Users/apple/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/StringCalculatorUnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Current\\calculator-challenge\\StringCalculatorUnitTest\\StringCalculatorUnitTest.csproj",
       "projectName": "StringCalculatorUnitTest",
-      "projectPath": "/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/StringCalculatorUnitTest.csproj",
-      "packagesPath": "/Users/apple/.nuget/packages/",
-      "outputPath": "/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/",
+      "projectPath": "C:\\Users\\USER\\Desktop\\Current\\calculator-challenge\\StringCalculatorUnitTest\\StringCalculatorUnitTest.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\Current\\calculator-challenge\\StringCalculatorUnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "/Users/apple/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/apple/WorkStation/calculator-challenge/StringCalculator/StringCalculator.csproj": {
-              "projectPath": "/Users/apple/WorkStation/calculator-challenge/StringCalculator/StringCalculator.csproj"
+            "C:\\Users\\USER\\Desktop\\Current\\calculator-challenge\\StringCalculator\\StringCalculator.csproj": {
+              "projectPath": "C:\\Users\\USER\\Desktop\\Current\\calculator-challenge\\StringCalculator\\StringCalculator.csproj"
             }
           }
         }
@@ -5610,22 +5613,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.27, 6.0.27]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.27, 6.0.27]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
