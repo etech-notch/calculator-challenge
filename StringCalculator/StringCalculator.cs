@@ -73,6 +73,11 @@ namespace StringCalculator
                 }
                 else
                 {
+                    if (inputAsInt > 1000)
+                    {
+                        inputAsInt = 0;
+                    }
+
                     switch (selectedOperation)
                     {
                         case 1:
