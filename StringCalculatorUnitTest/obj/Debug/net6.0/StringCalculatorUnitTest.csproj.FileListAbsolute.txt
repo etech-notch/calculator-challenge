@@ -109,12 +109,12 @@ C:/Users/USER/Desktop/Current/calculator-challenge/calculator-challenge/StringCa
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorApp/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.genruntimeconfig.cache
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorApp/StringCalculatorUnitTest/obj/Debug/net6.0/ref/StringCalculatorUnitTest.dll
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/CoverletSourceRootsMapping
-/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
-/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/xunit.runner.reporters.netcoreapp10.dll
-/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/xunit.runner.utility.netcoreapp10.dll
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/StringCalculator.deps.json
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/StringCalculator.runtimeconfig.json
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/StringCalculator
+/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/xunit.runner.reporters.netcoreapp10.dll
+/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/xunit.runner.utility.netcoreapp10.dll
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/StringCalculatorUnitTest.deps.json
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/StringCalculatorUnitTest.runtimeconfig.json
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/bin/Debug/net6.0/StringCalculatorUnitTest.dll
@@ -206,10 +206,10 @@ C:/Users/USER/Desktop/Current/calculator-challenge/calculator-challenge/StringCa
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.AssemblyInfoInputs.cache
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.AssemblyInfo.cs
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.csproj.CoreCompileInputs.cache
+/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.sourcelink.json
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCa.72E4E294.Up2Date
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.dll
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/refint/StringCalculatorUnitTest.dll
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.pdb
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.genruntimeconfig.cache
 /Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/ref/StringCalculatorUnitTest.dll
-/Users/apple/WorkStation/calculator-challenge/StringCalculatorUnitTest/obj/Debug/net6.0/StringCalculatorUnitTest.sourcelink.json

@@ -35,9 +35,9 @@ C:/Users/USER/Desktop/Current/calculator-challenge/calculator-challenge/StringCa
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.AssemblyInfoInputs.cache
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.AssemblyInfo.cs
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.csproj.CoreCompileInputs.cache
+/Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.sourcelink.json
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.dll
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/refint/StringCalculator.dll
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.pdb
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.genruntimeconfig.cache
 /Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/ref/StringCalculator.dll
-/Users/apple/WorkStation/calculator-challenge/StringCalculator/obj/Debug/net6.0/StringCalculator.sourcelink.json

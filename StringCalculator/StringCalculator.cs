@@ -26,6 +26,16 @@ namespace StringCalculator
         private static (int, string) performOperationWithDelimiter(string inputs, string delimiter, int selectedOperation)
         {
             string[] inputsAsArray = inputs.Split(delimiter);
+            var subInpoutArray = new List<string>();
+
+            foreach (var strg in inputsAsArray)
+            {
+                string[] strgAsArray = strg.Split("\\n");
+
+                subInpoutArray.AddRange(strgAsArray.ToList());
+            }
+
+            inputsAsArray = subInpoutArray.ToArray();
 
             bool inputsAreNumbers = inputsAsArray.All(u =>
             {
