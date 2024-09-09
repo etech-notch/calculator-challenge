@@ -13,6 +13,10 @@ namespace StringCalculator
             {
                 (operationResult, operationExpression) = (0, "0");
             }
+            else if (CheckDelimiter(inputs))
+            {
+                (operationResult, operationExpression) = GetDelimiter(inputs, selectedOperation);
+            }
             else
             {
                 (operationResult, operationExpression) = performOperationWithDelimiter(inputs, ",", selectedOperation);
@@ -21,6 +25,30 @@ namespace StringCalculator
             PrintResult(inputs, operationExpression, operationResult);
 
             return (operationResult, operationExpression);
+        }
+
+        private static bool CheckDelimiter(string inputs)
+        {
+            var inputsAsCharArray = inputs.ToCharArray();
+
+            if (inputsAsCharArray[0] == '/' && inputsAsCharArray[1] == '/')
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private static (int, string) GetDelimiter(string inputs, int selectedOperation)
+        {
+            string subInputs;
+
+            var inputsAsCharArray = inputs.ToCharArray();
+
+            string delimiter = inputsAsCharArray[2].ToString();
+
+            subInputs = inputs.Substring(5);
+
+            return performOperationWithDelimiter(subInputs, delimiter, selectedOperation);
         }
 
         private static (int, string) performOperationWithDelimiter(string inputs, string delimiter, int selectedOperation)
